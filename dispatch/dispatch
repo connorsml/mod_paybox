@@ -1,0 +1,9 @@
+%% Dispatch rules for mod_paybox
+[
+    {paybox_callback,   ["paybox", "callback"],  resource_paybox_callback, []},
+    {paybox_redirect,   ["paybox", "redirect"],  resource_template, [{template, "mod_paybox_redirect.tpl"}]},
+    {paybox_success,    ["paybox", "success"],   resource_template, [{template, "mod_paybox_success.tpl"}]},
+    {paybox_failure,    ["paybox", "failure"],   resource_template, [{template, "mod_paybox_failure.tpl"}]},
+    {paybox_cancelled,  ["paybox", "cancelled"], resource_template, [{template, "mod_paybox_cancelled.tpl"}]},
+    {paybox_test,       ["paybox", "test"],      resource_template, [{template, "mod_paybox_test.tpl"}]}
+].
